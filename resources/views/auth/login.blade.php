@@ -2,8 +2,16 @@
     <!-- Session Status -->
     <x-auth-session-status class="mb-4" :status="session('status')" />
 
+    
+
     <form method="POST" action="{{ route('login') }}">
         @csrf
+
+        <a href="{{ url('/') }}" class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-gray-200 hover:bg-blue-500 transition-colors duration-200 ease-in-out mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6 text-gray-900">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
+            </svg>
+        </a>
 
         <!-- Email Address -->
         <div>
